@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>SignUp</title>
+</head>
+<body>
+
+	<div class="form_panel">
+		<form name="user_form" method="post" onsubmit="return validate();">
+			<div class="label_signup">Sign Up for Free</div>
+			<div class="row-50">
+				<input type="text" name="first_name" placeholder="First Name" onblur="validate(this.name, this.value)">
+				<div class="error-box-50" id="first_name_error">Please Enter First Name</div>
+			</div>
+			<div class="row-50">
+				<input type="text" name="last_name" placeholder="Last Name" onblur="validate(this.name, this.value)">
+				<div class="error-box-50" id="last_name_error">Please Enter Last Name</div>
+			</div>
+			<div class="row-100">
+				<input type="email" name="email" placeholder="Email Address" onblur="validate(this.name, this.value)">
+				<div class="error-box-100" id="email_error">Please Enter Email Address</div>
+			</div>
+			<div class="row-100">
+				<input type="password" id="password" name="password" placeholder="Enter Password" onblur="validate(this.name, this.value)">
+				<div class="error-box-100" id="password_error">Please Enter Password That is aleast five characters</div>
+			</div>
+			<div class="row-100">
+				<input type="password" id="password_again" name="password" placeholder="Enter Password again" onkeyup="password_val(this.name, this.value)">
+				<div class="error-box-100" id="password_again_error">Sorry Password did not match</div>
+			</div>
+			<div class="row-100"><input type="Submit" name="Submit" value="Submit"></div>
+		</form>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script_form.js"></script>
+</body>
+</html>
